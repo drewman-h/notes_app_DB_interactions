@@ -177,7 +177,6 @@ def get_all_notes() -> Optional[Tuple[int, str, str]]:
 			connection.close()
 			print("Closed database connection in get_all_notes().")
 
-# looks DONE-ish
 def update_note(id: int, title: str, contents: str) -> Optional[Tuple[int, str, str]]:
 	query_format = "UPDATE notes SET title = %s, contents = %s WHERE id = %s;"
 	data = (title, contents, id)
